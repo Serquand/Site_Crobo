@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "dotenv": "^16.0.3",
     "pinia": "^2.0.22",
     "vue": "^3.0.0",
     "vue-router": "^4.1.5"
