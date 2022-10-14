@@ -7,6 +7,7 @@ import Game from "../views/Game";
 import EventView from "../views/EventView";
 import ProjectView from "../views/ProjectView";
 import RankingView from "../views/RankingView";
+import LoginView from "../views/LoginView";
 
 const routes = [
     {
@@ -15,7 +16,7 @@ const routes = [
         component: HomeView
     }, 
     {
-        path: "/adminDashboard", 
+        path: "/admin", 
         name: "Admin dashboard",
         component: AdminDashboardView, 
         meta: { requireAdmin: true }, 
@@ -49,15 +50,21 @@ const routes = [
         component: ProjectView, 
     }, 
     {
-        path: "/ranking/:user", 
+        path: "/ranking", 
         name: "Ranking", 
         component: RankingView
+    }, 
+    {
+        path: "/login", 
+        name: "Login", 
+        component: LoginView
     }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes, 
+  linkActiveClass: "active-class"
 })
 
 export default router
